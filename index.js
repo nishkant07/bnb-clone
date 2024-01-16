@@ -97,10 +97,10 @@ app.use((req,res,next)=>{
     next();
 });
 
-//home route....
-// app.get("/",((req,res,next)=>{
-//     res.send("home page");
-// }));
+//home
+app.get("/",((req,res,next)=>{
+    res.send("home page");
+}));
 
 
 app.use((req,res,next)=>{
