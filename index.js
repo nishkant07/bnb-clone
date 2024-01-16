@@ -95,7 +95,10 @@ app.use((req,res,next)=>{
     next();
 });
 
-
+//home
+app.get("/",((req,res,next)=>{
+    res.redirect("/listings");
+}));
 
 
 app.use((req,res,next)=>{
