@@ -63,11 +63,22 @@ module.exports.editRender=async(req,res,next)=>{
 };
 
 module.exports.editCreate=async(req,res,next)=>{
+
+    let location=`${req.body.listing.location},`+`${req.body.listing.country}`;
+    let responce=await geocodingClient.forwardGeocode({
+        query: location,
+        limit: 1
+      }).send();
+
+
     let {id}=req.params;
     let list=await Listing.findByIdAndUpdate(id,{...req.body.listing},{runValidators:true});//run validator is requiredd....
+    list.geometry=responce.body.features[0].geometry;
+    await list.save();
     if(typeof req.file !="undefined"){
         let {path,filename}=req.file;
         list.image={url:path,filename};
+        
         await list.save();
     }
     req.flash("success","Listing Updated Successfully!");
