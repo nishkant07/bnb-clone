@@ -83,9 +83,7 @@ main().then(()=>{
 
 const port=3000;
 
-app.listen(port,()=>{
-    console.log("server connected");
-});
+
 
 
 
@@ -97,10 +95,7 @@ app.use((req,res,next)=>{
     next();
 });
 
-//home
-app.get("/",((req,res,next)=>{
-    res.send("home page");
-}));
+
 
 
 app.use((req,res,next)=>{
@@ -161,7 +156,9 @@ app.use((err,req,res,next)=>{
 
 
 
-
+app.listen(port,()=>{
+    console.log("server connected");
+});
 
 
 
