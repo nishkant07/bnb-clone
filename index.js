@@ -111,6 +111,7 @@ app.use((req,res,next)=>{
 
 
 //importer files......
+// app.use("/",listingsRouter);
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/review",reviewsRouter);    //mergeparams are importent in route.......
 app.use("/",userRouter);

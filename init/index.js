@@ -4,6 +4,9 @@ const Listing=require("../models/listing.js");
 const Review=require("../models/review.js");
 
 
+
+
+
 async function main(){
     await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
 };
@@ -16,12 +19,14 @@ main().then(()=>{
 
 const initdb=async()=>{
   await Listing.deleteMany({});
+
    lisdata.data= lisdata.data.map((obj)=>({...obj,owner: "659d57c8fa056f140098a957"}));
   await Listing.insertMany(lisdata.data).then(()=>console.log("data added to db"))
 .catch(err=>console.log(err)); 
 };
 
 initdb();
+
 
 
 

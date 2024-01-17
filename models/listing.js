@@ -21,7 +21,10 @@ const listingSchema=new schema({
     }},
     price:Number,
     location:String,
-    country:String,
+    country:{
+      type:String,
+      set: v => v.charAt(0).toUpperCase()+v.slice(1).toLowerCase(),
+    },
     reviews:[
         {
         type:schema.Types.ObjectId,
@@ -42,7 +45,11 @@ const listingSchema=new schema({
           type: [Number],
           required: true
         }
-      }
+      },
+      category:{
+        type:String,
+        enum:["Trending","Rooms","Iconic Cities","Mountain","Castles","Amazing Pool","Camping","Farms","Arctic","Beach"],
+      },
 });
 
 

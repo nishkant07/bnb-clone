@@ -12,7 +12,9 @@
  }
  .filter{
   margin-right: 2.5rem;
-  opacity: 0.6;
+  color: black;
+  opacity: 0.5;
+  
  }
  #filters p{
   font-size: 0.8rem;
@@ -25,9 +27,9 @@
   font-size: 1.1rem;
   border: 1px solid black;
   border-radius: 15px;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   padding: 0.9rem;
-  margin-left: 2rem;
   opacity: 0.7;
  }
 .toggles:hover{
@@ -37,9 +39,13 @@
  .collapse{
   background-color: white !important;
   z-index: 1;
+  padding-bottom: 0 !important;
  }
  .taxinfo{
   display: none;
+ }
+ .collapse a{
+  text-decoration: none;
  }
 
 
@@ -51,49 +57,75 @@
   <div class="navbar navbar-expand-lg bg-body-white">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        Filters
+        <i class="fa-solid fa-circle-chevron-down"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+          <a href="/listings/all">
     <div class="filter nav-item">
+      <i class="fa-solid fa-earth-africa"></i>
+            <p>All</p>
+          </div> </a>  
+          
+          <a href="/listings/trending">
+    <div  class="filter nav-item">
       <i class="fa-solid fa-fire"></i>
       <p>Trending</p>
-    </div>
+    </div></a>
+
+         <a href="/listings/room">
     <div class="filter nav-item">
       <i class="fa-solid fa-bed"></i>
       <p>Rooms</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/iconic">
     <div class="filter nav-item">
       <i class="fa-solid fa-mountain-city"></i>
       <p>Iconic Cities</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/mountain">
     <div class="filter nav-item">
       <i class="fa-solid fa-mountain-sun"></i>
       <p>Mountain</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/castles">
     <div class="filter nav-item">
       <i class="fa-brands fa-fort-awesome"></i>
-      <p>Clastles</p>
-    </div>
+      <p>Castles</p>
+    </div></a>
+
+    <a href="/listings/pool">
     <div class="filter nav-item">
       <i class="fa-solid fa-person-swimming"></i>
-      <p>Amazing pool</p>
-    </div>
+      <p>Amazing Pool</p>
+    </div></a>
+
+    <a href="/listings/camp">
     <div class="filter nav-item">
       <i class="fa-solid fa-person-shelter"></i>
       <p>Camping</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/farms">
     <div class="filter nav-item">
       <i class="fa-solid fa-tractor"></i>
       <p>Farms</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/arctic">
     <div class="filter nav-item">
       <i class="fa-regular fa-snowflake"></i>
       <p>Arctic</p>
-    </div>
+    </div></a>
+
+    <a href="/listings/beach">
     <div class="filter nav-item">
       <i class="fa-solid fa-umbrella-beach"></i>
       <p>Beach</p>
-    </div>
+    </div></a>
   </div>
   </div>
 </div>
